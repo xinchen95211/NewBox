@@ -1,49 +1,53 @@
 package com.example.newbox.controller;
 
-
 import com.example.javafxsupport.AbstractFxmlController;
+import com.example.javafxsupport.AbstractSupportJAVAFX;
 import com.example.javafxsupport.FxmlController;
-
+import com.example.javafxsupport.GUIState;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
+import java.time.LocalTime;
 import java.util.ResourceBundle;
 
+import static com.example.javafxsupport.SpringJavaFX.showView;
 
-@FxmlController("login.fxml")
+
+@FxmlController("fxml/login.fxml")
 public class LoginController extends AbstractFxmlController implements Initializable {
+    @Autowired
+    private String bvs;
     @FXML
-    public AnchorPane bodys;
+    private AnchorPane body;
     @FXML
-    public Button login_button;
+    private Button login_button;
     @FXML
-    public Label username_text;
-    @FXML
-    public PasswordField password_text;
-    @FXML
-    public Label msg_text;
-
+    private PasswordField password;
     @Autowired
     private MessageController messageController;
+    public void login(){
+        login_button.setText(bvs);
+//        showView(MessageController.class);
+        messageController.show_view();
+        messageController.show("你好");
+        stage.close();
+    }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        login_button.setOnAction(Event -> {
-
-        messageController.show_view();
-        messageController.show("你好123");
-
-
-
-        });
-
-
-
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        stage.setResizable(false);
+        login_button.setOnAction(event -> login());
     }
 }
