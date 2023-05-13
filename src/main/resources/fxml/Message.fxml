@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane cache="true" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lockboxs.Fxfrom.MessageController">
+   <children>
+      <Label fx:id="msg_text" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="400.0" text="" />
+      <Button fx:id="ok_btn" layoutX="220.0" layoutY="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="确定" textFill="#f00000b8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="pass_btn" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="取消" textFill="#f00000b8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="S_RESIZE" />
+   </cursor>
+</AnchorPane>
