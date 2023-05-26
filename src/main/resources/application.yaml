@@ -2,7 +2,23 @@ spring:
   main:
     web-application-type: none
   datasource:
-    url: jdbc:h2:file:~/h2;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:file:~/h03;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  h2:
+    console:
+      enabled: false
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    auto-mapping-behavior: full  # 自动映射实体到表
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+      # 自动建表
+#server:
+#  port: 9898

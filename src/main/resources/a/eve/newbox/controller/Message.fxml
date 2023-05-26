@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane cache="true" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newbox.controller.MessageController">
+<AnchorPane cache="true" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a.eve.newbox.controller.MessageController">
    <children>
       <Label fx:id="msg_text" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="400.0" text="" />
       <Button fx:id="ok_btn" layoutX="220.0" layoutY="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="确定" textFill="#f00000b8">
